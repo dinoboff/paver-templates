@@ -1,0 +1,6 @@
+=======
+License
+=======
+
+
+.. literalinclude:: ../../LICENCE
