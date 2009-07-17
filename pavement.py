@@ -76,6 +76,7 @@ options(
         script_name='bootstrap.py',
         dest_dir='./virtual-env/',
         packages_to_install=[
+            'github-tools',
             'virtualenv',
             'pkginfo',
             'Nose',
