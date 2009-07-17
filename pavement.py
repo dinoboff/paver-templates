@@ -57,7 +57,7 @@ setup(
     license='BSD',
     packages = find_packages('src'),
     package_dir = {'': 'src'},
-    namespace_packages=[],
+    namespace_packages=['paver'],
     include_package_data=True,
     test_suite='nose.collector',
     zip_safe=False,
