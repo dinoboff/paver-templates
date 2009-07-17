@@ -6,7 +6,7 @@ Paver-Templates
 Create the the layout of a paver-enable package, including:
  - pavement.py;
  - README.rst, with basic installation instructions;
- - LICENSE (support BSD and (A/L) GPL licenses by default). For a GPL licenses,
+ - LICENSE (support BSD and (A/L)GPL licenses by default). For a GPL licenses,
    it will copy the required GPL license copies;
  - MANIFEST.in;
  - docs/conf.py and docs/index.rst. docs/index.rst simple include the content
