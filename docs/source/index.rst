@@ -1,12 +1,11 @@
-Welcome to paver-templates's documentation!
-========================================
-
 .. include:: ../../README.rst
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
+   
+   license
 
 Indices and tables
 ==================

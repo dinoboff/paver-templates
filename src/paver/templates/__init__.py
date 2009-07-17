@@ -28,9 +28,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 """
 
-__author__ = 'Damien Lebrun <dinoboff@hotmail.com>'
-
-
 from datetime import date
 import shutil
 import os
@@ -39,6 +36,8 @@ import ConfigParser
 from paste.script.templates import Template, var
 from setuptools.command.setopt import edit_config, config_file
 from pkg_resources import resource_filename
+
+__author__ = 'Damien Lebrun <dinoboff@hotmail.com>'
 
 YEAR = date.today().year
 
