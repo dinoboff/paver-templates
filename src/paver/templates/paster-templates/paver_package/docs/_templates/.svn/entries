@@ -1,0 +1,16 @@
+8
+
+dir
+0
+http://paver.googlecode.com/svn/trunk/paver/paster-templates/paver_package/docs/_templates
+http://paver.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+

@@ -1,0 +1,5 @@
+"""
+$license_body
+"""
+
+__author__ = ${repr('%s <%s>' % ($author,$author_email,))}
