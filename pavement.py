@@ -92,7 +92,7 @@ options(
 
 
 @task
-@needs('generate_setup', 'minilib', 'setuptools.command.sdist')
+@needs('generate_setup', 'setuptools.command.sdist')
 def sdist():
     """Overrides sdist to make sure that our setup.py is generated."""
 
