@@ -1,2 +1,4 @@
 dist/*
 src/*.egg-info/*
+docs/build/doctrees/*
+*.pyc
