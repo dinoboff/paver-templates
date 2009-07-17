@@ -10,7 +10,7 @@ The easiest way to get $project is if you have setuptools_ installed::
 
 	easy_install $project
 
-Without setuptools, it's still pretty easy. Download the $project .tgz file from 
+Without setuptools, it's still pretty easy. Download the ${project}.tgz file from 
 `$project's Cheeseshop page`_, untar it and run::
 
 	python setup.py install
