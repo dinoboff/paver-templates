@@ -8,12 +8,13 @@ from setuptools import find_packages
 # import here packages only needed for development
 try:
     from github.tools.task import *
+    from git import Git
     from paver.virtual import bootstrap
 except:
     pass
     
 
-version = "0.1.0"
+version = "0.1.0a1"
 
 long_description = open('README.rst', 'r').read()
 
@@ -31,11 +32,12 @@ classifiers = [
     ]
 
 install_requires = [
-    'Sphinx',
-    'pkginfo',
-    'Paver',
-    'PasteScript',
-    'Cheetah',
+    "setuptools>=0.6c9",
+    "Paver>=1.0.1",
+    "pkginfo>=0.4.1",
+    "PasteScript>=1.7.3",
+    "Sphinx>=0.6.2",
+    "Cheetah>=2.2.1",
     ]
 
 entry_points="""
@@ -76,10 +78,9 @@ options(
         script_name='bootstrap.py',
         dest_dir='./virtual-env/',
         packages_to_install=[
-            'github-tools',
-            'virtualenv',
-            'pkginfo',
-            'Nose',
+            "virtualenv>=1.3.3",
+            "github-tools>=0.1.6",
+            "nose>=0.11.1",
             ]
         ),
     sphinx=Bunch(
@@ -89,7 +90,38 @@ options(
         ),
     )
 
+
 @task
 @needs('generate_setup', 'minilib', 'setuptools.command.sdist')
 def sdist():
     """Overrides sdist to make sure that our setup.py is generated."""
+
+
+@task
+@needs('gh_pages_build', 'github.tools.task.gh_pages_update')
+def gh_pages_update():
+    """Overrides github.tools.task to rebuild the doc (with sphinx)."""
+    
+    
+tag_name = 'v%s' % version
+    
+@task
+def tag():
+    """tag a new version of this distribution"""
+    git = Git('.')
+    git.pull('origin', 'master')
+    git.tag(tag_name)
+
+
+@task
+def adjust_options():
+    options.update(
+        gh_pages_update=Bunch(commit_message='Update doc to %s' % version))
+
+
+@task
+@needs('sdist', 'tag', 'setuptools.command.upload',
+    'adjust_options', 'gh_pages_update')
+def upload():
+    """Upload the distribution to pypi, the new tag and the doc to Github"""
+    Git('.').push('origin', 'master', tag_name)
