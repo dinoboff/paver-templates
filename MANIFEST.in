@@ -5,8 +5,10 @@ include setup.cfg
 include pavement.py
 include paver-minilib.zip
 include bootstrap.py
+recursive-exclude . *.pyc
 
 recursive-include docs *
 prune docs/build
+recursive-exclude docs *.pyc
 
 recursive-include support-files *
