@@ -1,6 +1,12 @@
 Changes
 =======
 
+master branch (Jul 22, 2009):
+-----------------------------
+
+- change name of the template's readme file to README.rst
+
+
 0.1.0a2 (Jul 22, 2009):
 -----------------------
 
