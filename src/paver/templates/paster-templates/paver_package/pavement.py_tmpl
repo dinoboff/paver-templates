@@ -1,11 +1,11 @@
-# -*-Import: -*-
+# -*- Import: -*-
 from paver.easy import *
 from paver.setuputils import setup
 from setuptools import find_packages
 
 try:
     # Optional tasks, only needed for development
-    # -*-Optional import: -*-
+    # -*- Optional import: -*-
     import paver.doctools
     import paver.virtual
     import paver.misctasks
@@ -25,7 +25,7 @@ classifiers = [
     ]
 
 install_requires = [
-    # -*-Install requires: -*-
+    # -*- Install requires: -*-
     'setuptools',
     ]
 
