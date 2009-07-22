@@ -14,7 +14,7 @@ except:
     pass
     
 
-version = "0.1.0a1"
+version = "0.1.0a2"
 
 long_description = open('README.rst', 'r').read()
 
