@@ -55,7 +55,7 @@ setup(
     keywords='Paver PasteScript template',
     author='Damien Lebrun',
     author_email='dinoboff@hotmail.com',
-    url='',
+    url='http://dinoboff.github.com/paver-templates',
     license='BSD',
     packages = find_packages('src'),
     package_dir = {'': 'src'},
