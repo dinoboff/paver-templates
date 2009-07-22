@@ -38,6 +38,7 @@ install_requires = [
     "PasteScript>=1.7.3",
     "Sphinx>=0.6.2",
     "Cheetah>=2.2.1",
+    "virtualenv>=1.3.3",
     ]
 
 entry_points="""
