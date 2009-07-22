@@ -72,6 +72,7 @@ options(
             "Sphinx>=0.6b1",
             "pkginfo", 
             "virtualenv"],
+        dest_dir='./virtual-env/',
         install_paver=True,
         script_name='bootstrap.py',
         paver_command_line=None
