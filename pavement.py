@@ -16,7 +16,7 @@ except:
 
 version = "0.1.0a2"
 
-long_description = open('README.rst', 'r').read()
+long_description = open('README.rst', 'r').read() + open('CHANGES.rst', 'r').read() 
 
 classifiers = [
     # Get more strings from 
