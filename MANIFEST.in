@@ -11,4 +11,6 @@ recursive-include docs *
 prune docs/build
 recursive-exclude docs *.pyc
 
+recursive-include src/paver/templates/paster-templates *
+
 recursive-include support-files *
