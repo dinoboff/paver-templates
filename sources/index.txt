@@ -5,6 +5,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
+   changes
    license
 
 Indices and tables
