@@ -1,51 +1,0 @@
-8
-
-dir
-0
-http://paver.googlecode.com/svn/trunk/paver/paster-templates/licenses
-http://paver.googlecode.com/svn
-add
-
-
-
-
-
-
-
-svn:special svn:externals svn:needs-lock
-
-gpl.txt
-file
-
-
-
-add
-
-agpl.txt
-file
-
-
-
-add
-
-lgpl-2.1.txt
-file
-
-
-
-add
-
-lgpl.txt
-file
-
-
-
-add
-
-gpl-2.0.txt
-file
-
-
-
-add
-
