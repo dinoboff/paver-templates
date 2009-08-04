@@ -26,9 +26,7 @@ Without setuptools, it's still pretty easy. Download the Paver-Template .tgz
 file from `Paver-Templates' Cheeseshop page`_, untar it and run::
 
     python setup.py install
-
-.. _Paver-Templates' Cheeseshop page: http://pypi.python.org/pypi/paver-templates/
-.. _setuptools: http://peak.telecommunity.com/DevCenter/EasyInstall
+    
 
 
 Usage
@@ -37,4 +35,36 @@ Usage
 As simple as::
 
     paster create -t paver_package <package name>
+    
+ 
+   
+Development
+===========
 
+If you would like to help the development of this package, `fork this project`_
+or `report bugs`_.
+
+Paver-template project contains a virtualenv bootstrap script that will install 
+all required packages for development::
+
+	python boostrap --no-site-packages
+	source virtual-env/bin/activate
+	paver develop
+
+If you would rather use virtualenvwrapper, the project contains a list of 
+requirement suitable for pip::
+
+	mkvirtualenv --no-site-packages paver-templates
+	easy_install pip
+	pip install -r dev-requirements.txt
+	paver develop
+
+ 
+
+
+
+
+.. _Paver-Templates' Cheeseshop page: http://pypi.python.org/pypi/paver-templates/
+.. _setuptools: http://peak.telecommunity.com/DevCenter/EasyInstall
+.. _fork this project: http://github.com/dinoboff/paver-templates/
+.. _report bugs: http://github.com/dinoboff/paver-templates/issues

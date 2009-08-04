@@ -1,5 +1,6 @@
 import os
 import sys
+import sets
 
 from paver.easy import *
 from paver.setuputils import setup
@@ -90,9 +91,40 @@ options(
         ),
     )
 
+@task
+def pip_requirements():
+    """Create a pip requirement file."""
+    req = sets.Set()
+    for d in (
+        options.virtualenv.packages_to_install
+        + options.setup.get('install_requires', [])
+        ):
+        req.add(d+'\n')
+    
+    f = open('dev-requirements.txt', 'w')
+    try:
+        f.writelines(req)
+    finally:
+        f.close()
+        
+@task
+def manifest():
+    """Generate a Manifest using 'git ls-files'"""
+    manifest_in = open('MANIFEST.in', 'w')    
+    try: 
+        includes = (
+            "include %s\n" % f 
+            for f in Git('.').ls_files().splitlines()
+            if (not os.path.basename(f).startswith('.') 
+                and f != 'docs/build/html')
+            )
+        manifest_in.writelines(includes)
+    finally:
+        manifest_in.close()
 
 @task
-@needs('generate_setup', 'minilib', 'setuptools.command.sdist')
+@needs('pip_requirements', 'generate_setup', 'manifest', 'minilib',
+    'setuptools.command.sdist')
 def sdist():
     """Overrides sdist to make sure that our setup.py is generated."""
 
@@ -114,14 +146,10 @@ def tag():
 
 
 @task
-def adjust_options():
-    options.update(
-        gh_pages_update=Bunch(commit_message='Update doc to %s' % version))
-
-
-@task
-@needs('sdist', 'tag', 'setuptools.command.upload',
-    'adjust_options', 'gh_pages_update')
+@needs('sdist', 'tag', 'setuptools.command.upload',)
 def upload():
     """Upload the distribution to pypi, the new tag and the doc to Github"""
+    options.update(
+        gh_pages_update=Bunch(commit_message='Update doc to %s' % version))
+    gh_pages_update()
     Git('.').push('origin', 'master', tag_name)

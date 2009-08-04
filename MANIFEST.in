@@ -1,17 +1,28 @@
-include *.rst
-include *.txt
+include CHANGES.rst
 include LICENCE
-include setup.py
-include setup.cfg
+include MANIFEST.in
+include README.rst
+include bootstrap.py
+include dev-requirements.txt
+include docs/source/changes.rst
+include docs/source/conf.py
+include docs/source/index.rst
+include docs/source/license.rst
 include pavement.py
 include paver-minilib.zip
-include bootstrap.py
-recursive-exclude . *.pyc
-
-recursive-include docs *
-prune docs/build
-recursive-exclude docs *.pyc
-
-recursive-include src/pavertemplates/paster-templates *
-
-recursive-include support-files *
+include setup.cfg
+include setup.py
+include src/pavertemplates/__init__.py
+include src/pavertemplates/paster-templates/licenses/agpl.txt
+include src/pavertemplates/paster-templates/licenses/gpl-2.0.txt
+include src/pavertemplates/paster-templates/licenses/gpl.txt
+include src/pavertemplates/paster-templates/licenses/lgpl-2.1.txt
+include src/pavertemplates/paster-templates/licenses/lgpl.txt
+include src/pavertemplates/paster-templates/paver_package/+package+/__init__.py_tmpl
+include src/pavertemplates/paster-templates/paver_package/LICENSE.txt_tmpl
+include src/pavertemplates/paster-templates/paver_package/MANIFEST.in
+include src/pavertemplates/paster-templates/paver_package/README.rst_tmpl
+include src/pavertemplates/paster-templates/paver_package/docs/conf.py_tmpl
+include src/pavertemplates/paster-templates/paver_package/docs/index.rst_tmpl
+include src/pavertemplates/paster-templates/paver_package/pavement.py_tmpl
+include support-files/readme.rst
