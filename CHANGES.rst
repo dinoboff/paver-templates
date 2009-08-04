@@ -18,7 +18,7 @@ Changes
 -----------------------
 
 - Add missing template files from distribution.
-- Fix bug with markers (like "-*- Marker Name: -*-"). 
+- Fix bug with markers (like `-*- Marker Name: -*-`). 
 
 
 0.1.0a1 (Jul 18, 2009):

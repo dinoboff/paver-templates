@@ -17,7 +17,11 @@ except:
 
 version = "0.1.0b3"
 
-long_description = open('README.rst', 'r').read() + open('CHANGES.rst', 'r').read() 
+long_description = (
+    open('README.rst', 'r').read()
+    + '\n\n'
+    + open('CHANGES.rst', 'r').read()
+    ) 
 
 classifiers = [
     # Get more strings from 
