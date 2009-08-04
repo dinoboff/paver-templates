@@ -15,7 +15,7 @@ except:
     pass
     
 
-version = "0.1.0b2"
+version = "0.1.0b3"
 
 long_description = open('README.rst', 'r').read() + open('CHANGES.rst', 'r').read() 
 
