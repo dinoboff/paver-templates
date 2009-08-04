@@ -44,10 +44,10 @@ Development
 If you would like to help the development of this package, `fork this project`_
 or `report bugs`_.
 
-Paver-template project contains a virtualenv bootstrap script that will install 
-all required packages for development::
+The Paver-template project contains a virtualenv bootstrap script 
+that will install all required packages for development::
 
-	python boostrap --no-site-packages
+	python bootstrap --no-site-packages
 	source virtual-env/bin/activate
 	paver develop
 
@@ -58,9 +58,6 @@ requirement suitable for pip::
 	easy_install pip
 	pip install -r dev-requirements.txt
 	paver develop
-
- 
-
 
 
 
