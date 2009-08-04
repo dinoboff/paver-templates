@@ -5,13 +5,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Paver-Templates &mdash; paver-templates v0.1.0b2 documentation</title>
+    <title>Paver-Templates &mdash; paver-templates v0.1.0b3 documentation</title>
     <link rel="stylesheet" href="static/default.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0b2',
+        VERSION:     '0.1.0b3',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -19,7 +19,7 @@
     </script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <link rel="top" title="paver-templates v0.1.0b2 documentation" href="" />
+    <link rel="top" title="paver-templates v0.1.0b3 documentation" href="" />
     <link rel="next" title="Changes" href="changes.html" /> 
   </head>
   <body>
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="changes.html" title="Changes"
              accesskey="N">next</a> |</li>
-        <li><a href="">paver-templates v0.1.0b2 documentation</a> &raquo;</li> 
+        <li><a href="">paver-templates v0.1.0b3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -69,9 +69,28 @@ file from <a class="reference external" href="http://pypi.python.org/pypi/paver-
 <p>As simple as:</p>
 <div class="highlight-python"><pre>paster create -t paver_package &lt;package name&gt;</pre>
 </div>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>If you would like to help the development of this package, <a class="reference external" href="http://github.com/dinoboff/paver-templates/">fork this project</a>
+or <a class="reference external" href="http://github.com/dinoboff/paver-templates/issues">report bugs</a>.</p>
+<p>The Paver-template project contains a virtualenv bootstrap script
+that will install all required packages for development:</p>
+<div class="highlight-python"><pre>python bootstrap --no-site-packages
+source virtual-env/bin/activate
+paver develop</pre>
+</div>
+<p>If you would rather use virtualenvwrapper, the project contains a list of
+requirement suitable for pip:</p>
+<div class="highlight-python"><pre>mkvirtualenv --no-site-packages paver-templates
+easy_install pip
+pip install -r dev-requirements.txt
+paver develop</pre>
+</div>
 <p>Contents:</p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="changes.html">Changes</a><ul>
+<li class="toctree-l2"><a class="reference external" href="changes.html#b3-aug-4-2009">0.1.0b3 (Aug 4, 2009):</a></li>
 <li class="toctree-l2"><a class="reference external" href="changes.html#b2-jul-22-2009">0.1.0b2 (Jul 22, 2009):</a></li>
 <li class="toctree-l2"><a class="reference external" href="changes.html#a2-jul-22-2009">0.1.0a2 (Jul 22, 2009):</a></li>
 <li class="toctree-l2"><a class="reference external" href="changes.html#a1-jul-18-2009">0.1.0a1 (Jul 18, 2009):</a></li>
@@ -100,7 +119,8 @@ file from <a class="reference external" href="http://pypi.python.org/pypi/paver-
             <ul>
 <li><a class="reference external" href="">Paver-Templates</a><ul>
 <li><a class="reference external" href="#installation">Installation</a></li>
-<li><a class="reference external" href="#usage">Usage</a><ul>
+<li><a class="reference external" href="#usage">Usage</a></li>
+<li><a class="reference external" href="#development">Development</a><ul>
 </ul>
 </li>
 <li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
@@ -142,7 +162,7 @@ file from <a class="reference external" href="http://pypi.python.org/pypi/paver-
         <li class="right" >
           <a href="changes.html" title="Changes"
              >next</a> |</li>
-        <li><a href="">paver-templates v0.1.0b2 documentation</a> &raquo;</li> 
+        <li><a href="">paver-templates v0.1.0b3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
