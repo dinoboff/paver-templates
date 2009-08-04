@@ -44,7 +44,7 @@ install_requires = [
 entry_points="""
     # -*- Entry points: -*-
     [paste.paster_create_template]
-    paver_package = paver.templates:PaverTemplate
+    paver_package = pavertemplates:PaverTemplate
     """
 
 setup(
@@ -60,7 +60,6 @@ setup(
     license='BSD',
     packages = find_packages('src'),
     package_dir = {'': 'src'},
-    namespace_packages=['paver'],
     include_package_data=True,
     test_suite='nose.collector',
     zip_safe=False,
@@ -93,7 +92,7 @@ options(
 
 
 @task
-@needs('generate_setup', 'setuptools.command.sdist')
+@needs('generate_setup', 'minilib', 'setuptools.command.sdist')
 def sdist():
     """Overrides sdist to make sure that our setup.py is generated."""
 
