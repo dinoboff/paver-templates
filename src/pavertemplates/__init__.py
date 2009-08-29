@@ -205,7 +205,7 @@ class PaverTemplate(Template):
         var('license_name',
             'license name - GPLv2/GPLv3/LGPLv2/LGPLv3/AGPLv3/BSD/...',
             default='BSD'),
-        var('org', 'Organisation name (required for 3-clause BSD).'),
+        var('org', 'Organisation name (required for 3-clauses BSD).'),
         ]
     
     def pre(self, command, output_dir, vars):

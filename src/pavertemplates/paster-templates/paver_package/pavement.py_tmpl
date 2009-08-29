@@ -79,7 +79,7 @@ options(
         ),
     )
 
-options.setup.package_data=paver.setuputils.find_package_data(
+options.setup.package_data = paver.setuputils.find_package_data(
     ${repr($package)}, package=${repr($package)}, only_in_packages=False)
 
 if ALL_TASKS_LOADED:
